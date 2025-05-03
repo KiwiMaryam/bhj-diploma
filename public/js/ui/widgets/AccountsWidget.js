@@ -10,12 +10,10 @@ class AccountsWidget {
 
   registerEvents() {
     // Обработчик нажатия на кнопку создания счета
-    const createAccountButton = this.element.querySelector('.create-account');
-    if (createAccountButton) {
-    createAccountButton.addEventListener('click', () => {
-      App.getModal('newAccount').open();
-    
-    });}
+    this.element.querySelector('.create-account').addEventListener('click', () => {
+      const modal = App.getModal('newAccount');
+      modal.open();
+    });
 
     // Обработчик нажатия на существующие счета
     this.element.addEventListener('click', (event) => {

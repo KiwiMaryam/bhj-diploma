@@ -11,7 +11,7 @@ class LoginForm extends AsyncForm {
         App.setState('user-logged');
 
         // Закрываем окно, в котором находится форма
-        const modal = App.getModal('modal-login');
+        const modal = App.getModal('login');
         if (modal) {
           modal.close();
         }

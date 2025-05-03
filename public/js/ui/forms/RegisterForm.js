@@ -10,7 +10,7 @@ class RegisterForm extends AsyncForm {
         App.setState('user-logged');
 
         // Закрываем модальное окно, в котором находится форма
-        const modal = App.getModal('modal-register');
+        const modal = App.getModal('register');
         if (modal) {
           modal.close();
         }

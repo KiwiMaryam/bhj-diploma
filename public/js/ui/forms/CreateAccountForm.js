@@ -4,7 +4,7 @@ class CreateAccountForm extends AsyncForm {
     Account.createRequest(data, (err, response) => {
       if (response && response.success) {
         // Закрываем модальное окно
-        const modal = App.getModal('modal-new-account');
+        const modal = App.getModal('newAccount');
         modal.close();
 
         // Сбрасываем форму
