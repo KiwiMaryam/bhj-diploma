@@ -19,13 +19,13 @@ class AccountsWidget {
         });
     }
 
-    // // Обработчик нажатия на существующие счета
-    // this.element.addEventListener('click', (event) => {
-    //     const accountElement = event.target.closest('.account');
-    //     if (accountElement) {
-    //         this.onSelectAccount(accountElement); // Вызываем метод для выбора счета
-    //     }
-    // });
+    // Обработчик нажатия на существующие счета
+    this.element.addEventListener('click', (event) => {
+        const accountElement = event.target.closest('.account');
+        if (accountElement) {
+            this.onSelectAccount(accountElement); // Вызываем метод для выбора счета
+        }
+    });
 }
 
 
