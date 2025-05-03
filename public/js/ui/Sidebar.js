@@ -29,15 +29,15 @@ class Sidebar {
 
   static initAuthLinks() {
     // Находим кнопки для регистрации, входа и выхода
-    const registerButton = document.querySelector('.register-link');
-    const loginButton = document.querySelector('.login-link');
-    const logoutButton = document.querySelector('.logout-link');
+    const registerButton = document.querySelector('.menu-item_register');
+    const loginButton = document.querySelector('.menu-item_login');
+    const logoutButton = document.querySelector('.menu-item_logout');
 
     // Обработчик для кнопки "Регистрация"
     if (registerButton) {
       registerButton.addEventListener('click', (event) => {
         event.preventDefault();
-        const modal = App.getModal('modal-register'); // Получаем модальное окно регистрации
+        const modal = App.getModal('register'); // Получаем модальное окно регистрации
         modal.open(); // Открываем модальное окно
       });
     }
@@ -46,7 +46,7 @@ class Sidebar {
     if (loginButton) {
       loginButton.addEventListener('click', (event) => {
         event.preventDefault();
-        const modal = App.getModal('modal-login'); // Получаем модальное окно входа
+        const modal = App.getModal('login'); // Получаем модальное окно входа
         modal.open(); // Открываем модальное окно
       });
     }
