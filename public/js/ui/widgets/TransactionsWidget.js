@@ -16,14 +16,14 @@ class TransactionsWidget {
     if (createIncomeButton) {
       createIncomeButton.addEventListener('click', () => {
         // Открываем модальное окно для создания нового дохода
-        App.getModal('modal-new-income').open();
+        App.getModal('newIncome').open();
       });
     }
 
     if (createExpenseButton) {
       createExpenseButton.addEventListener('click', () => {
         // Открываем модальное окно для создания нового расхода
-        App.getModal('modal-new-expense').open();
+        App.getModal('newExpense').open();
       });
     }
   }

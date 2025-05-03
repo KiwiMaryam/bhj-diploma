@@ -5,6 +5,12 @@
       "email": "demo@demo",
       "password": "demo",
       "id": "1"
+    },
+    {
+      "name": "Иван",
+      "email": "damachenko@mail.ru",
+      "password": "1234",
+      "id": "5d7q4t8ma8inyz7"
     }
   ],
   "accounts": [
