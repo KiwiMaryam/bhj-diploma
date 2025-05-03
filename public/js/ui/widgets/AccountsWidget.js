@@ -10,19 +10,24 @@ class AccountsWidget {
 
   registerEvents() {
     // Обработчик нажатия на кнопку создания счета
-    this.element.querySelector('.create-account').addEventListener('click', () => {
-      const modal = App.getModal('newAccount');
-      modal.open();
-    });
+    const createAccountButton = this.element.querySelector('.create-account');
+    if (createAccountButton) {
+        createAccountButton.addEventListener('click', (event) => {
+            event.preventDefault(); // предотвращаем переход по ссылке
+            const modal = App.getModal('newAccount'); // Получаем модальное окно для создания нового счета
+            modal.open(); // Открываем модальное окно
+        });
+    }
 
     // Обработчик нажатия на существующие счета
     this.element.addEventListener('click', (event) => {
-      const accountElement = event.target.closest('.account');
-      if (accountElement) {
-        this.onSelectAccount(accountElement);
-      }
+        const accountElement = event.target.closest('.account');
+        if (accountElement) {
+            this.onSelectAccount(accountElement); // Вызываем метод для выбора счета
+        }
     });
-  }
+}
+
 
   update() {
     if (!User.current()) return; // Проверка авторизации
